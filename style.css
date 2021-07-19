@@ -1,0 +1,27 @@
+h1 {
+  color: purple;
+}
+h2 {
+}
+p {
+}
+div {
+  color: purple;
+}
+body {
+  font-family: cursive;
+  background-color: rgb(226, 142, 133);
+}
+.weather-app {
+  border: 5px solid palevioletred;
+}
+input {
+  color: purple;
+  padding: 4px;
+  margin: 15px;
+  display: block;
+}
+
+.col {
+  spacing: 20px;
+}
