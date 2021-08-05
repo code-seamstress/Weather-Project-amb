@@ -28,8 +28,10 @@ function displayWeatherCondition(response) {
     response.data.main.temp
   );
   let iconElement = document.querySelector("icon");
-  iconElement.innerHTML = "http://openweathermap.org/img/wn/04d@2x.png"
-}
+  iconElement.setAttribute(
+    "src"
+    "http://openweathermap.org/img/wn/04d@2x.png"
+};
 
 function search(event) {
   event.preventDefault();
