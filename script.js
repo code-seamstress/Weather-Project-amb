@@ -27,6 +27,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  let iconElement = document.querySelector("icon");
+  iconElement.innerHTML = "http://openweathermap.org/img/wn/04d@2x.png"
 }
 
 function search(event) {
