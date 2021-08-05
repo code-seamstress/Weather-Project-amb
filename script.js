@@ -29,7 +29,7 @@ function displayWeatherCondition(response) {
   );
   let iconElement = document.querySelector("icon");
   iconElement.setAttribute(
-    "src"
+    "src",
     "http://openweathermap.org/img/wn/04d@2x.png"
 };
 
