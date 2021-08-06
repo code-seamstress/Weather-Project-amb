@@ -19,13 +19,16 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[dayIndex];
-
+   
   return `${day} ${hours}:${minutes}`;
 }
-function displayWeatherCondition(response) {
+function displayTemperature(response) {
+let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round
+  (response.data.main.temp);
+  
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+  
   );
   let iconElement = document.querySelector("icon");
   iconElement.setAttribute(
@@ -36,20 +39,15 @@ function displayWeatherCondition(response) {
 
 function search(event) {
   event.preventDefault();
-  //let cityElement = document.querySelector("#city");
-  //let cityInput = document.querySelector("#city-input");
-  //cityElement.innerHTML = cityInput.value;
-  //make the api call here and once i get response, display city and temp
   let apiKey = "39cdec0e8624a940458fa04e89274d6c";
   let city = document.querySelector("#city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayWeatherCondition);
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  
 }
 
 let dateElement = document.querySelector("#date");
