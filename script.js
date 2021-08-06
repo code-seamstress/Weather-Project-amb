@@ -22,6 +22,7 @@ function formatDate(date) {
    
   return `${day} ${hours}:${minutes}`;
 }
+
 function displayTemperature(response) {
 let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round
@@ -29,7 +30,7 @@ let temperatureElement = document.querySelector("#temperature");
   
   
   let apiKey = "39cdec0e8624a940458fa04e89274d6c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
