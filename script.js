@@ -34,10 +34,7 @@ let temperatureElement = document.querySelector("#temperature");
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  
-}
+
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
