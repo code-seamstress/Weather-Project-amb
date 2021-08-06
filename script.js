@@ -27,20 +27,8 @@ let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round
   (response.data.main.temp);
   
-  document.querySelector("#city").innerHTML = response.data.name;
   
-  );
-  let iconElement = document.querySelector("icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-}
-
-function search(event) {
-  event.preventDefault();
   let apiKey = "39cdec0e8624a940458fa04e89274d6c";
-  let city = document.querySelector("#city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
