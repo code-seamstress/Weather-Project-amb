@@ -19,20 +19,18 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[dayIndex];
-   
+
   return `${day} ${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
-let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round
-  (response.data.main.temp);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
 }
-  
-  let apiKey = "39cdec0e8624a940458fa04e89274d6c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayTemperature);
 
+let apiKey = "39cdec0e8624a940458fa04e89274d6c";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
+axios.get(apiUrl).then(displayTemperature);
 
 iconElement.setAttribute(
   "src",
