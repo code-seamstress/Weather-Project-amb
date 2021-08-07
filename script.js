@@ -28,11 +28,13 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let windElement = document.querySelector("#wind");
+  let precipitationElement = document.querySelector("#precipitation");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  precipitationElement.innerHTML = response.data.
 }
 let apiKey = "39cdec0e8624a940458fa04e89274d6c";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
