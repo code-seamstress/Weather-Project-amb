@@ -34,7 +34,11 @@ let temperatureElement = document.querySelector("#temperature");
   axios.get(apiUrl).then(displayTemperature);
 
 
-
+iconElement.setAttribute(
+  "src",
+  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+);
+iconElement.setAttribute("alt", response.data.weather[0].description);
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
