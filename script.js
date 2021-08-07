@@ -23,24 +23,36 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
-}
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+let cityElement = document.querySelector("#city");
 
-let apiKey = "39cdec0e8624a940458fa04e89274d6c";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
-axios.get(apiUrl).then(displayTemperature);
+  let currentTime = new Date();
 
+  let searchForm = document.querySelector("#search-form");
+
+
+  temperatureElement.innerHTML = Math.round(response.data.main.temperature);
+  dateElement.innerHTML = formatDate(currentTime);
+  searchForm.addEventListener("submit", search);
 iconElement.setAttribute(
   "src",
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 );
 iconElement.setAttribute("alt", response.data.weather[0].description);
+cityElement.innerHTML = response.data.name;
 
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
+  
+}
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+function search(city) {
+let apiKey = "39cdec0e8624a940458fa04e89274d6c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemperature);
+
+
+}
