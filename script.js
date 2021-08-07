@@ -25,7 +25,7 @@ function formatDate(date) {
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
 }
 let apiKey = "39cdec0e8624a940458fa04e89274d6c";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
