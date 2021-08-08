@@ -34,7 +34,9 @@ function displayTemperature(response) {
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.innerHTML = `http://openweathermap.org/img/wn/04d@2x.png`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/04d@2x.png`);
 
 function search(city) {
   let apiKey = "39cdec0e8624a940458fa04e89274d6c";
