@@ -54,6 +54,10 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  alert("link clicked");
+}
 search("New York");
 
 let form = document.querySelector("#search-form");
