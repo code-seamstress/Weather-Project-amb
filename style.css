@@ -24,3 +24,7 @@ input {
 .col {
   spacing: 20px;
 }
+
+.city {
+  font-size: 40px;
+}
