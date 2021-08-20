@@ -34,10 +34,25 @@ function formatDay(timestamp) {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML = "forecast";
+  forecastElement.innerHTML = `<div class="weather-forecast">
+<div class="weather-forecast" id="forecast">    
+<div class="row">
+<div class="col-2">
+
+    Saturday
+    <br />
+   <img
+    src="http://openweathermap.org/img/wn/50d@2x.png"
+     alt="" 
+     width="40"/>
+    <br />
+    86
+    <br />
+    Cloudy
+    </div>
+`;
 
 }
-
 
 
 function displayTemperature(response) {
