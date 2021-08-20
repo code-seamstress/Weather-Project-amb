@@ -28,3 +28,8 @@ input {
 #city {
   font-size: 30px;
 }
+
+.weather-forecast {
+  margin-top: 20px; 
+  
+}
