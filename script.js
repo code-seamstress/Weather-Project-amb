@@ -33,8 +33,9 @@ function formatDay(timestamp) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
 
-  forecastElement.innerHTML = `<div class="weather-forecast">
+  forecastHTML = `<div class="weather-forecast">
 <div class="weather-forecast" id="forecast">    
 <div class="row">
 <div class="col-2">
@@ -51,6 +52,7 @@ function displayForecast() {
     Cloudy
     </div>
 `;
+  forecastElement.innerHTML = forecastHTML;
 
 }
 
