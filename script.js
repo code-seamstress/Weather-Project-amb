@@ -52,27 +52,7 @@ Saturday
     Cloudy
     </div>
 `;
-  forecastHTML =
-    forecastHTML +
-    `
-  <div class="weather-forecast">
-<div class="weather-forecast" id="forecast">    
-<div class="col-2">
-Saturday
-    <br />
-   <img
-    src="http://openweathermap.org/img/wn/50d@2x.png"
-     alt="" 
-     width="40"/>
-    <br />
-    86
-    <br />
-    Cloudy
-    </div>
-`;
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-
+ 
 }
 
 
