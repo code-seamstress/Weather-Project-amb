@@ -37,8 +37,7 @@ function displayForecast() {
   let forecastHTML = `<div class="row">`;
 
   forecastHTML = forecastHTML + `
-  <div class="weather-forecast">
-<div class="weather-forecast" id="forecast">    
+   
 <div class="col-2">
 Saturday
     <br />
