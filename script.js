@@ -35,8 +35,9 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-
-  forecastHTML = forecastHTML + `
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + `
    
 <div class="col-2">
 Saturday
@@ -51,9 +52,12 @@ Saturday
     Cloudy
     </div>
 `;
- 
-}
+  });
 
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
