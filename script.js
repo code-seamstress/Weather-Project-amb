@@ -40,7 +40,7 @@ function displayForecast(response) {
     forecastHTML = forecastHTML + `
    
 <div class="col-2">
-${forecastDay.dt}
+${forecastDay.temp.max}
     <br />
    <img
     src="https://openweathermap.org/img/wn/50d@2x.png"
