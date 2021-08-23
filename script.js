@@ -43,7 +43,7 @@ function displayForecast() {
 ${day}
     <br />
    <img
-    src="http://openweathermap.org/img/wn/50d@2x.png"
+    src="https://openweathermap.org/img/wn/50d@2x.png"
      alt="" 
      width="40"/>
     <br />
@@ -58,6 +58,14 @@ ${day}
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+
+
+}
+
+
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -79,6 +87,8 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
