@@ -36,19 +36,18 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay) {
+  forecast.forEach(function (day) {
     forecastHTML = forecastHTML + `
    
 <div class="col-2">
-<div class="weather-forecast-date">${forecastDay.dt}
-
+${day}
     <br />
    <img
-    src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon@2x.png"
+    src="https://openweathermap.org/img/wn/50d@2x.png"
      alt="" 
      width="40"/>
     <br />
-    ${forecastDay.temp.day}°
+    86
     <br />
     Cloudy
     </div>
