@@ -44,11 +44,11 @@ function displayForecast(response) {
 
     <br />
    <img
-    src="https://openweathermap.org/img/wn/50d@2x.png"
+    src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon@2x.png"
      alt="" 
      width="40"/>
     <br />
-    86
+    ${forecastDay.temp.day}°
     <br />
     Cloudy
     </div>
