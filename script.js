@@ -36,11 +36,11 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML = forecastHTML + `
    
 <div class="col-2">
-${day}
+${forecastDay.dt}
     <br />
    <img
     src="https://openweathermap.org/img/wn/50d@2x.png"
