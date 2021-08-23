@@ -60,7 +60,9 @@ ${day}
 }
 
 
-
+function getForecast(coordinates) {
+  console.log(coordinates);
+}
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -83,6 +85,7 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
+  getForecast(response.data.coord);
   
 }
 
