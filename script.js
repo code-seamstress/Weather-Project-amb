@@ -23,6 +23,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -40,6 +42,8 @@ function displayForecast(response) {
     forecastHTML = forecastHTML + `
    
 <div class="col-2">
+<div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+
 ${forecastDay.temp.max}°
     <br />
    <img
