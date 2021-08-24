@@ -43,7 +43,7 @@ function displayForecast(response) {
 ${forecastDay.temp.max}°
     <br />
    <img
-    src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
      alt="" 
      width="40"/>
    
