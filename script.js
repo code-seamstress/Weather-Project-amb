@@ -23,8 +23,6 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -40,7 +38,9 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
-    forecastHTML = forecastHTML + `
+      forecastHTML =
+        forecastHTML +
+        `
    
 <div class="col-2">
 <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
@@ -65,11 +65,9 @@ ${Math.round(forecastDay.temp.max)}°
     }
   });
 
-
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
 
 function getForecast(coordinates) {
   console.log(coordinates);
@@ -77,7 +75,6 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
-
 }
 
 function displayTemperature(response) {
@@ -102,7 +99,6 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
   getForecast(response.data.coord);
-  
 }
 
 function search(city) {
@@ -132,8 +128,6 @@ function displayCelsiusTemperature(event) {
 }
 let celsiusTemperature = null;
 
-
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -144,6 +138,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
-
-
-
