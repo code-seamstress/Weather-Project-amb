@@ -35,4 +35,6 @@ input {
   
 }
 
-border {
+.date {
+  font-size: 30px;
+}
