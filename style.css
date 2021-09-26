@@ -11,6 +11,10 @@ body {
   font-family: cursive;
   background-color: rgb(226, 142, 133);
 }
+
+footer {
+  text-align: center;
+}
 .weather-app {
   border: 5px solid palevioletred;
 }
