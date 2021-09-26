@@ -25,7 +25,7 @@ input {
   spacing: 20px;
 }
 
-#city {
+.city {
   font-size: 30px;
 }
 
@@ -36,8 +36,4 @@ input {
 
 .date-font {
   font-size: 30px;
-}
-
-.weather-forecast {
-  font-size: 40px;
 }
