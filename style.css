@@ -52,3 +52,10 @@ input {
 .body-font {
   font-size: 32px;
 }
+#city-input {
+  float: left;
+  width: 100%;
+}
+#btn {
+  width: auto;
+}
